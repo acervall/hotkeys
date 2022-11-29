@@ -1,0 +1,137 @@
+body {
+  background: linear-gradient(0deg, rgb(25, 64, 101) 0%, rgb(4, 35, 72) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  color: #d3f6ff;
+}
+
+#map {
+  width: 875px;
+  position: absolute;
+  z-index: 1;
+}
+
+#Matrix {
+  position: absolute;
+  top: 0;
+}
+
+circle {
+  fill: #92d6e9bb;
+}
+
+.banaan {
+  transition: all 2s ease;
+  animation: 5s infinite pulse;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    fill: #4687c4;
+  }
+
+  100% {
+    opacity: 1;
+    fill: #4687c4;
+  }
+
+}
+
+main {
+  z-index: 5;
+}
+
+#start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide {
+  height: 300px;
+}
+
+#divSlide {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  animation: 1s ease-out 0s 1 middleSlide;
+}
+
+.pane {
+  height: 300px;
+  position: absolute;
+}
+
+#left {
+  transform: translateX(-300px);
+  animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+#right {
+  transform: translateX(300px);
+  animation: 1s ease-out 0s 1 slideInRight;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes middleSlide {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+#instructions {
+  text-align: left;
+  position: absolute;
+  width: 590px;
+  padding: 20px;
+}
+
+
+/*
+
+634
+
+
+main {
+  background-image: url(images/slide.png);
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 5;
+  width: 70vw;
+  height: 60vh;
+  border: 5px solid #1C6EA4;
+} */
+
+/* transform: rotate(90deg); */
